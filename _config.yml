@@ -12,32 +12,36 @@ baseurl: ''                 # the subpath of your site, e.g. /blog
 permalink: /:year/:title/   # how should we display posts url
 
 # Meta settings
-email: jackal@gmail.com
-author: The Jackal
-twitter_username: clenemt
-github_username: clenemt
-github_source: jackal
+# email: jackal@gmail.com
+email: '&#104;&#101;&#108;&#108;&#111;&#64;&#99;&#104;&#114;&#105;&#115;&#104;&#111;&#100;&#103;&#115;&#111;&#110;&#119;&#101;&#98;&#46;&#99;&#111;&#46;&#117;&#107;'
+author: Chris Hodgson
+#twitter_username: chrishodgson
+github_username: chrishodgson
+linkedin_username: chrismhodgson
 
 # Put your ga tracking code below
 google_analytics: 'UA-XXXXXXXX-X'
 
 # Pagination settings
 paginate: 5                           # number of posts to show per page
-paginate_path: "/articles/page:num/"  # link scheme for articles, should be letf as is
+paginate_path: "/code/page:num/"  # link scheme for articles, should be left as is
 
 # Navigation settings
 # Used to define the navigation menu items
 # > Title is the tile of the navigation item, url the url and desc is the tooltip
 navigation:
-  - title: Articles
-    url: /articles/
-    desc: Stuffs I write about
-  - title: Projects
-    url: /projects/
-    desc: Stuffs I like to do
+#  - title: Articles
+#    url: /articles/
+#    desc: Stuffs I write about
+#  - title: Projects
+#    url: /projects/
+#    desc: Stuffs I like to do
   - title: Work
     url: /work/
-    desc: Stuffs I hate to do
+    desc: Where I've workled
+  - title: Code
+    url: /code/
+    desc: Code I write
   - title: About
     url: /about/
     desc: Learn about me
@@ -53,6 +57,7 @@ defaults:
 
 # Markdown parser settings
 markdown: kramdown
+highlighter:      rouge
 kramdown:
   input: GFM
   hard_wrap: false          # you can change this if you feel like it
@@ -64,6 +69,11 @@ include:
 exclude:
   - README.md
   - vendor
-gems:
-  - jekyll-paginate
 
+#collections:
+#  articles:
+#    output: true
+#    permalink: /articles/:path/
+
+plugins:
+  - jekyll-paginate

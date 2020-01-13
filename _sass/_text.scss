@@ -33,7 +33,8 @@ h6 { font-size: $fs-h6; }
 }
 
 .pretty-links {
-  a { @include make-link($link-color, $link-hover-color, $body-bg); }
+  // added white-space: nowrap;
+  a { @include make-link($link-color, $link-hover-color, $body-bg); white-space: nowrap; }
 }
 
 hr {
@@ -76,8 +77,12 @@ pre {
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: 90%;
+  //font-size: 90%;
+  font-size: 75%;
+  background-color: $light-blue; //added
+  padding: 1rem; //added
   color: $gray-dark;
+  white-space: pre-wrap;
 
   code {
     padding: 0;

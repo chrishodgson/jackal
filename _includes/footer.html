@@ -1,12 +1,16 @@
 <footer class="site-footer">
 
-  <div class="site-copy">&copy; {{ site.time | date: '%Y' }}<span class="site-author">{{ site.author }}</span></div>
+<!--  <div class="site-copy">&copy; {{ site.time | date: '%Y' }}<span class="site-author">{{ site.author }}</span></div>-->
 
   <div class="site-links">
     <div class="site-contact">
       <ul>
         {% if site.email %}
         <li><a href="mailto:{{ site.email }}">Contact</a></li>
+        {% endif %}
+
+        {% if site.linkedin_username %}
+        <li><a target="_blank" rel="external" href="https://linkedin.com/in/{{ site.linkedin_username }}">Linkedin</a></li>
         {% endif %}
 
         {% if site.github_username %}
@@ -20,18 +24,16 @@
     </div>
 
     <div class="site-source">
-      <ul>
-        <li><a target="_blank" href="https://github.com/{{ site.github_username }}/{{ site.github_source }}">Source</a></li>
-      </ul>
+        &copy; {{ site.time | date: '%Y' }}<span class="site-author">{{ site.author }}</span>
     </div>
   </div>
 
 </footer>
 <!-- site-footer -->
 
-{% if page.syntax %}
-<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/syntax.css">
-{% endif %}
+<!--{% if page.syntax %}-->
+<!--<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/syntax.css">-->
+<!--{% endif %}-->
 
 <script src="{{ site.baseurl }}/assets/js/main.js"></script>
 
